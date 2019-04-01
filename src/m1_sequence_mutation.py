@@ -81,7 +81,7 @@ def zero_changer(tuple_of_lists):
       :type tuple_of_lists: tuple of list[int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -96,7 +96,6 @@ def zero_changer(tuple_of_lists):
             if sublist[j] == 0:
                 sublist[j] = i
                 i = i + 1
-        return sublist
 
 
 

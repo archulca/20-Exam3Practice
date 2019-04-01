@@ -135,8 +135,9 @@ def doubler(list1, list2):
     for k in range (len(list2)):
         newlist = 2*list2[k]
         return newlist
-    #for j in range (len(list2)):
-        #list2[j] = 2*list2[j]
+    for j in range (len(list1)):
+        list1[j] = 2*list1[j]
+
 
 
 
