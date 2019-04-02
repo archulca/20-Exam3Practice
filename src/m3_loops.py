@@ -135,6 +135,13 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ###########################################################################
+    expected = []
+    actual = practice_problem3(0,4,5)
+    print('Test 1 expected:',expected, 'actual:', actual)
+
+    expected = []
+    actual = practice_problem3(0,0,0)
+    print('Test 2 expected:', expected, 'actual:', actual)
 
 
 def practice_problem3(start, n, threshold):
@@ -218,10 +225,14 @@ def practice_problem3(start, n, threshold):
     #    TIME ESTIMATE:   < 15 minutes.
     ###########################################################################
     newlist = []
+    import math
+    if n == 0:
+        return newlist
     for k in range (start,n):
-        if math.sin(k) + math.cos(k) > threshold:
-            newlist = newlist + [k]
-    return newlist
+        if (math.sin(k) + math.cos(k)) > threshold:
+            newlist.append(k)
+        if len(newlist) == n:
+            return newlist
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
