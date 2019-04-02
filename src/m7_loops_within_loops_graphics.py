@@ -92,7 +92,7 @@ def hourglass(window, n, point, radius, color):
     a color that rosegraphics understands.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #       We provided some tests for you (above).
     # -------------------------------------------------------------------------
     ###########################################################################
@@ -104,12 +104,34 @@ def hourglass(window, n, point, radius, color):
     #    DIFFICULTY:      8
     #    TIME ESTIMATE:  25 minutes (warning: this problem is challenging)
     # -------------------------------------------------------------------------
-    for k in range (n):
-        circle = rg.Circle(rg.Point(point.x, point.y), radius)
-        for j in range(len(color)):
-            circle.fill_color = color
-        circle.attach_to(window)
-        window.render()
+    circle = rg.Circle(rg.Point(point.x, point.y), radius)
+    circle.fill_color = color
+    circle.attach_to(window)
+    window.render()
+    import math
+    for k in range (1,n):
+        newpointx = point.x -k*radius
+        newpointy = point.y + math.sqrt(3)*radius*k
+        for j in range (0,k+1):
+            newcircle = rg.Circle(rg.Point(newpointx+ 2*j*radius, newpointy),radius)
+            newcircle.fill_color = color
+            newcircle.attach_to(window)
+            window.render()
+    for m in range(1,n):
+        newpointx = point.x - m*radius
+        newpointy = point.y - math.sqrt(3)*radius*m
+        for i in range (0,m+1):
+            newcircle = rg.Circle(rg.Point(newpointx+ 2*i*radius, newpointy),radius)
+            newcircle.fill_color = color
+            newcircle.attach_to(window)
+            window.render()
+
+
+
+
+
+
+
 
 
 

@@ -318,7 +318,7 @@ def practice_problem4c(points):
     newpoint = []
     answer = 'Not found'
     for k in range(len(points)):
-        if (is_prime(points[k].x)) == 1 and (is_prime(points[k].y)) == 1:
+        if (is_prime(points[k].x)) is True and (is_prime(points[k].y)) is True:
             temp1 = points[k].x
             temp2 = points[k].y
             points[k].x = temp2
@@ -326,11 +326,6 @@ def practice_problem4c(points):
             newpoint = rg.Point(points[k].x,points[k].y)
             return newpoint
     return answer
-
-
-
-
-
 
 def run_test_practice_problem4d():
     """ Tests the    practice_problem4d    function. """
