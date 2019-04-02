@@ -30,6 +30,8 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
+import math
+
 
 
 def main():
@@ -102,6 +104,13 @@ def hourglass(window, n, point, radius, color):
     #    DIFFICULTY:      8
     #    TIME ESTIMATE:  25 minutes (warning: this problem is challenging)
     # -------------------------------------------------------------------------
+    for k in range (n):
+        circle = rg.Circle(rg.Point(point.x, point.y), radius)
+        for j in range(len(color)):
+            circle.fill_color = color
+        circle.attach_to(window)
+        window.render()
+
 
 
 def run_test_many_hourglasses():

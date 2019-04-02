@@ -304,7 +304,7 @@ def practice_problem4c(points):
       :rtype: rg.Point | string
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPORTANT: This problem is your LOWEST PRIORITY for preparing
@@ -315,6 +315,20 @@ def practice_problem4c(points):
     #    DIFFICULTY:      9
     #    TIME ESTIMATE:   15 minutes.
     ###########################################################################
+    newpoint = []
+    answer = 'Not found'
+    for k in range(len(points)):
+        if (is_prime(points[k].x)) == 1 and (is_prime(points[k].y)) == 1:
+            temp1 = points[k].x
+            temp2 = points[k].y
+            points[k].x = temp2
+            points[k].y = temp1
+            newpoint = rg.Point(points[k].x,points[k].y)
+            return newpoint
+    return answer
+
+
+
 
 
 def run_test_practice_problem4d():
