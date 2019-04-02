@@ -331,6 +331,7 @@ def practice_problem4c(points):
 
 
 
+
 def run_test_practice_problem4d():
     """ Tests the    practice_problem4d    function. """
     # -------------------------------------------------------------------------
